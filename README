@@ -4,4 +4,16 @@ This was part of something I was working on a year or so back. Most of what's al
 
 I don't have time at this stage to complete this project but I encourage you guys/gals to fork this project and implement the remaining stuff. Ports to other languages shouldn't be too hard after studying IracingWebApi.java
 
-NOTE: Please use sparingly as it creates extra load on iRacings servers and if you abuse the system, you may just find yourself banned for some period of time.
+========
+REQUIRES
+========
+Json.Simple
+http://code.google.com/p/json-simple/
+
+Commons-Lang
+http://commons.apache.org/proper/commons-lang/
+
+====
+NOTE
+====
+Please use sparingly as it creates extra load on iRacings servers and if you abuse the system, you may just find yourself banned for some period of time.
