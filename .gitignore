@@ -39,7 +39,13 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
-/jssecacerts
-/build.xml
-/nbproject
-/build
+/library/jssecacerts
+/library/build.xml
+/library/build/
+/library/dist/
+/library/nbproject/
+/library/libs/nblibraries.properties
+/library/libs/CopyLibs
+/library/libs/junit
+/library/libs/junit_4
+/.gitattributes

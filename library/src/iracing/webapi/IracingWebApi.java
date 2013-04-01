@@ -241,17 +241,17 @@ public class IracingWebApi {
 //                System.err.println("==========================");
 //            }
             
-//            SeasonStandings.SearchParameters params = new SeasonStandings.SearchParameters();
-//            params.setEnd(5);
-//            params.setSeasonId(672);
-//            long totalRecords = webApi.getSeasonStandings(params, new SeasonStandingsParser.ItemHandler() {
-//                @Override
-//                public boolean onSeasonStandingParsed(SeasonStanding standing) {
-//                    System.err.println(standing.getDriverName() + " (" + standing.getTotalPoints() + ")");
-//                    return true;
-//                }
-//            });
-//            System.err.println("TOTAL RECORDS : " + totalRecords);
+            SeasonStandings.SearchParameters params = new SeasonStandings.SearchParameters();
+            params.setEnd(5);
+            params.setSeasonId(672);
+            long totalRecords = webApi.getSeasonStandings(params, new SeasonStandingsParser.ItemHandler() {
+                @Override
+                public boolean onSeasonStandingParsed(SeasonStanding standing) {
+                    System.err.println(standing.getDriverName() + " (" + standing.getTotalPoints() + ")");
+                    return true;
+                }
+            });
+            System.err.println("TOTAL RECORDS : " + totalRecords);
             
 //            SeasonQualifyingResults.SearchParameters params = new SeasonQualifyingResults.SearchParameters();
 //            params.setEnd(5);
@@ -285,49 +285,48 @@ public class IracingWebApi {
 //            }
 //            System.err.println("TOTAL RECORDS : " + standings.getTotalRecords());
             
-//            GlobalDataDao data = webApi.getGlobalData();
-            GlobalData data = webApi.getGlobalData();
-            for (Division d : data.getDivisions()) {
-                System.err.println(d.getShortName());
-            }
-            for (EventType e : data.getEventTypes()) {
-                System.err.println(e.getName());
-            }
-            for (Category c : data.getCategories()) {
-                System.err.println(c.getName());
-            }
-            for (License l : data.getLicenses()) {
-                System.err.println(l.getFullName());
-            }
-            for (Track t : data.getTracks()) {
-                String s = t.getName();
-                if (!"".equals(t.getConfigName())) s += " - " + t.getConfigName();
-                System.err.println(s);
-            }
-            for (Car c : data.getCars()) {
-                System.err.println(c.getName());
-            }
-            for (CarClass cc : data.getCarClasses()) {
-                System.err.println(cc.getName());
-            }
-            for (Season s : data.getSeasons()) {
-                System.err.println(s.getSeriesShortName() + " - " + s.getSeasonShortName());
-            }
-            for (YearAndQuarters yaq : data.getYearAndQuarters()) {
-                System.err.println(yaq.getYear() + " : " + yaq.getQuarters().size());
-            }
-            for (LicenseGroup lg : data.getLicenseGroups()) {
-                System.err.println(lg.getName());
-            }
-            for (LicenseLevel ll : data.getLicenseLevels()) {
-                System.err.println(ll.getName());
-            }
-            for (HardcoreOption ho : data.getHardcoreOptions()) {
-                System.err.println(ho.getName());
-            }
-            for (Club c : data.getClubs()) {
-                System.err.println(c.getShortName());
-            }
+//            GlobalData data = webApi.getGlobalData();
+//            for (Division d : data.getDivisions()) {
+//                System.err.println(d.getShortName());
+//            }
+//            for (EventType e : data.getEventTypes()) {
+//                System.err.println(e.getName());
+//            }
+//            for (Category c : data.getCategories()) {
+//                System.err.println(c.getName());
+//            }
+//            for (License l : data.getLicenses()) {
+//                System.err.println(l.getFullName());
+//            }
+//            for (Track t : data.getTracks()) {
+//                String s = t.getName();
+//                if (!"".equals(t.getConfigName())) s += " - " + t.getConfigName();
+//                System.err.println(s);
+//            }
+//            for (Car c : data.getCars()) {
+//                System.err.println(c.getName());
+//            }
+//            for (CarClass cc : data.getCarClasses()) {
+//                System.err.println(cc.getName());
+//            }
+//            for (Season s : data.getSeasons()) {
+//                System.err.println(s.getSeriesShortName() + " - " + s.getSeasonShortName());
+//            }
+//            for (YearAndQuarters yaq : data.getYearAndQuarters()) {
+//                System.err.println(yaq.getYear() + " : " + yaq.getQuarters().size());
+//            }
+//            for (LicenseGroup lg : data.getLicenseGroups()) {
+//                System.err.println(lg.getName());
+//            }
+//            for (LicenseLevel ll : data.getLicenseLevels()) {
+//                System.err.println(ll.getName());
+//            }
+//            for (HardcoreOption ho : data.getHardcoreOptions()) {
+//                System.err.println(ho.getName());
+//            }
+//            for (Club c : data.getClubs()) {
+//                System.err.println(c.getShortName());
+//            }
             
 //            getV8QualifyingStats(webApi);
             
@@ -364,15 +363,15 @@ public class IracingWebApi {
 //                System.err.println(s);
 //            }
             
-            DriverStat.SearchParameters params = new DriverStat.SearchParameters();
-            params.setCategoryId(2); // road
-            params.setActiveDriversOnly(true);
-            params.setUserFilter(UserFilter.FRIENDS);
-            params.setEnd(10);
-            DriverStats stats = webApi.getDriverStats(params, false);
-            for (DriverStat stat : stats.getStats()) {
-                System.err.println(stat.getRecordNumber() + " : " + stat.getIrating() + " " + stat.getDriver().getName());
-            }
+//            DriverStat.SearchParameters params = new DriverStat.SearchParameters();
+//            params.setCategoryId(2); // road
+//            params.setActiveDriversOnly(true);
+//            params.setUserFilter(UserFilter.FRIENDS);
+//            params.setEnd(10);
+//            DriverStats stats = webApi.getDriverStats(params, false);
+//            for (DriverStat stat : stats.getStats()) {
+//                System.err.println(stat.getRecordNumber() + " : " + stat.getIrating() + " " + stat.getDriver().getName());
+//            }
             
             System.err.println("Bytes received : " + webApi.getBytesReceived());
         } catch (Exception ex) {
